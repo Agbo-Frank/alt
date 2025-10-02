@@ -15,11 +15,6 @@ body {
 	transition: background 0.3s ease;
 }
 
-/* Dark theme styles */
-body.dark-theme {
-	background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-}
-
 .container {
 	background: rgba(255, 255, 255, 0.95);
 	border-radius: 20px;
@@ -29,11 +24,6 @@ body.dark-theme {
 	text-align: center;
 	min-width: 400px;
 	transition: all 0.3s ease;
-}
-
-body.dark-theme .container {
-	background: rgba(44, 62, 80, 0.95);
-	color: #ecf0f1;
 }
 
 header {
@@ -47,24 +37,6 @@ h1 {
 	font-size: 2.5rem;
 	color: #2c3e50;
 	font-weight: 300;
-}
-
-body.dark-theme h1 {
-	color: #ecf0f1;
-}
-
-.theme-toggle {
-	background: none;
-	border: none;
-	font-size: 1.5rem;
-	cursor: pointer;
-	padding: 0.5rem;
-	border-radius: 50%;
-	transition: transform 0.2s ease;
-}
-
-.theme-toggle:hover {
-	transform: scale(1.1);
 }
 
 .stopwatch-container {
@@ -90,19 +62,11 @@ body.dark-theme h1 {
 	letter-spacing: 0.1em;
 }
 
-body.dark-theme .time-display {
-	color: #ecf0f1;
-}
-
 .milliseconds {
 	font-family: 'Courier New', monospace;
 	font-size: 1.5rem;
 	color: #7f8c8d;
 	font-weight: bold;
-}
-
-body.dark-theme .milliseconds {
-	color: #95a5a6;
 }
 
 .controls {
@@ -193,10 +157,6 @@ body.dark-theme .milliseconds {
 	font-size: 1.2rem;
 }
 
-body.dark-theme .lap-times h3 {
-	color: #ecf0f1;
-}
-
 .lap-list {
 	list-style: none;
 	max-height: 200px;
@@ -205,11 +165,6 @@ body.dark-theme .lap-times h3 {
 	border-radius: 10px;
 	padding: 1rem;
 	background: rgba(255, 255, 255, 0.5);
-}
-
-body.dark-theme .lap-list {
-	border-color: #555;
-	background: rgba(44, 62, 80, 0.5);
 }
 
 .lap-item {
@@ -221,12 +176,6 @@ body.dark-theme .lap-list {
 	font-weight: bold;
 	color: #2c3e50;
 	border-left: 4px solid #3498db;
-}
-
-body.dark-theme .lap-item {
-	background: rgba(44, 62, 80, 0.7);
-	color: #ecf0f1;
-	border-left-color: #3498db;
 }
 
 /* Responsive design */

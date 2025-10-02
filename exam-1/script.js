@@ -15,7 +15,6 @@ class Stopwatch {
 		this.resetBtn = document.getElementById('reset-btn');
 		this.lapBtn = document.getElementById('lap-btn');
 		this.lapList = document.getElementById('lap-list');
-		this.themeToggle = document.getElementById('theme-toggle');
 
 		this.initializeEventListeners();
 		this.updateDisplay();
@@ -26,7 +25,6 @@ class Stopwatch {
 		this.stopBtn.addEventListener('click', () => this.stop());
 		this.resetBtn.addEventListener('click', () => this.reset());
 		this.lapBtn.addEventListener('click', () => this.lap());
-		this.themeToggle.addEventListener('click', () => this.toggleTheme());
 
 		// Keyboard shortcuts
 		document.addEventListener('keydown', (e) => {
@@ -150,29 +148,11 @@ class Stopwatch {
 			this.lapBtn.style.opacity = '0.6';
 		}
 	}
-
-	toggleTheme() {
-		document.body.classList.toggle('dark-theme');
-		const isDark = document.body.classList.contains('dark-theme');
-		this.themeToggle.textContent = isDark ? '☀️' : '🌙';
-
-		// Save theme preference
-		localStorage.setItem('stopwatch-theme', isDark ? 'dark' : 'light');
-	}
-
-	loadTheme() {
-		const savedTheme = localStorage.getItem('stopwatch-theme');
-		if (savedTheme === 'dark') {
-			document.body.classList.add('dark-theme');
-			this.themeToggle.textContent = '☀️';
-		}
-	}
 }
 
 // Initialize the stopwatch when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-	const stopwatch = new Stopwatch();
-	stopwatch.loadTheme();
+	new Stopwatch();
 
 	// Add some visual feedback for button interactions
 	const buttons = document.querySelectorAll('.btn');
